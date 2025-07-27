@@ -1,5 +1,4 @@
 'use client';
-
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Mail, Sparkles, Zap, History, Wand2 } from 'lucide-react';
 
@@ -94,7 +93,7 @@ export default function HomePage() {
                   description: 'Access pre-built templates for common email scenarios',
                   delay: '200'
                 }
-              ].map((feature, index) => (
+              ].map((feature) => (
                 <div
                   key={feature.title}
                   className="group p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5"
@@ -115,62 +114,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Trust Section */}
-            <div className="mt-24 space-y-8">
-              <div className="space-y-2">
-                <h3 className="text-white/70 text-sm uppercase tracking-wider font-medium">Trusted by professionals worldwide</h3>
-                <p className="text-white/50 text-sm">Join thousands of professionals who trust us with their email communication</p>
-              </div>
-              
-              {/* Trust Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-                {[
-                  { number: '10K+', label: 'Active Users' },
-                  { number: '500K+', label: 'Emails Generated' },
-                  { number: '98%', label: 'Satisfaction Rate' },
-                  { number: '50+', label: 'Countries' },
-                ].map((metric) => (
-                  <div key={metric.label} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1 bg-gradient-to-r from-white via-white to-white/70 bg-clip-text text-transparent">
-                      {metric.number}
-                    </div>
-                    <div className="text-white/50 text-sm">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Company Logos */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
-                <div className="flex items-center justify-around gap-8 overflow-hidden opacity-50 hover:opacity-70 transition-opacity duration-300">
-                  {[
-                    'Fortune 500', 'Tech Leaders', 'Global Enterprises', 'Startups', 'Educational Institutions',
-                    'Fortune 500', 'Tech Leaders', 'Global Enterprises' // Repeated for scrolling effect
-                  ].map((company, index) => (
-                    <div
-                      key={index}
-                      className="flex-shrink-0 px-8 py-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10"
-                    >
-                      <span className="text-white/80 whitespace-nowrap font-medium">{company}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Trust Badges */}
-              <div className="flex justify-center gap-6 pt-8">
-                {[
-                  { label: 'Enterprise Ready', icon: '🏢' },
-                  { label: 'GDPR Compliant', icon: '🔒' },
-                  { label: '24/7 Support', icon: '🌍' },
-                ].map((badge) => (
-                  <div key={badge.label} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full backdrop-blur-sm border border-white/10">
-                    <span>{badge.icon}</span>
-                    <span className="text-white/70 text-sm font-medium">{badge.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Removed Trust Section Below */}
           </div>
         </div>
       </div>
